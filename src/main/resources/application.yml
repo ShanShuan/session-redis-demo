@@ -1,0 +1,21 @@
+server:
+  port: 8015
+spring:
+  application:
+    name: sesion-redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    timeout: 200s
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 20s
+        max-idle: 8
+        min-idle: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:29381/eureka
